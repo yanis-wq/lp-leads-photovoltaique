@@ -2,7 +2,6 @@ import LeadPageLayout, { LeadPageConfig } from "@/components/LeadPageLayout";
 import { Shield, Target, Phone, Zap } from "lucide-react";
 
 const config: LeadPageConfig = {
-  badge: "Leads Audit Énergétique exclusifs",
   title: "Des leads Audit Énergétique 100% qualifiés",
   subtitle:
     "KRNO identifie les propriétaires ayant besoin d'un audit énergétique grâce à l'IA, et vous envoie en exclusivité des leads avec un projet réel d'amélioration thermique.",
@@ -36,14 +35,6 @@ const config: LeadPageConfig = {
       iconBg: "bg-orange-100",
       iconColor: "text-orange-500",
     },
-  ],
-  statsTitle: "Tous types d'audits énergétiques couverts",
-  statsSubtitle:
-    "De l'audit réglementaire à l'audit global, nos leads couvrent l'ensemble de vos missions.",
-  stats: [
-    { title: "Audit réglementaire", desc: "Propriétaires souhaitant se conformer à la réglementation." },
-    { title: "Audit global", desc: "Projets de rénovation d'ampleur nécessitant un audit complet." },
-    { title: "Toutes zones géographiques", desc: "Leads ciblés selon votre zone d'intervention." },
   ],
   productLabel: "Leads Audit Énergétique",
   productDesc:

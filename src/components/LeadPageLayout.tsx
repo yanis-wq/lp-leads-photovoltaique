@@ -37,14 +37,10 @@ export interface LeadPlan {
 }
 
 export interface LeadPageConfig {
-  badge: string;
   title: string;
   subtitle: string;
   ctaUrl: string;
   features: LeadFeature[];
-  statsTitle: string;
-  statsSubtitle: string;
-  stats: LeadStat[];
   productLabel: string;
   productDesc: string;
   pricingBannerText: string;
@@ -78,7 +74,7 @@ const press = [
 // ─── Template ────────────────────────────────────────────────────────────────
 
 const LeadPageLayout = ({ config }: { config: LeadPageConfig }) => {
-  const { badge, title, subtitle, ctaUrl, features, statsTitle, statsSubtitle, stats,
+  const { title, subtitle, ctaUrl, features,
     productLabel, productDesc, pricingBannerText, plans } = config;
 
   return (
