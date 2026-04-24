@@ -31,6 +31,7 @@ export interface LeadPlan {
   catalogPrice: string;
   features: string[];
   cta: string;
+  ctaUrl: string;
   highlighted: boolean;
   accentColor: boolean;
 }
@@ -39,6 +40,7 @@ export interface LeadPageConfig {
   badge: string;
   title: string;
   subtitle: string;
+  ctaUrl: string;
   features: LeadFeature[];
   statsTitle: string;
   statsSubtitle: string;
@@ -76,7 +78,7 @@ const press = [
 // ─── Template ────────────────────────────────────────────────────────────────
 
 const LeadPageLayout = ({ config }: { config: LeadPageConfig }) => {
-  const { badge, title, subtitle, features, statsTitle, statsSubtitle, stats,
+  const { badge, title, subtitle, ctaUrl, features, statsTitle, statsSubtitle, stats,
     productLabel, productDesc, pricingBannerText, plans } = config;
 
   return (
@@ -120,7 +122,7 @@ const LeadPageLayout = ({ config }: { config: LeadPageConfig }) => {
         </motion.div>
 
         <motion.a
-          href="https://tally.so/r/wM92WM?lp=photovoltaique"
+          href={ctaUrl}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -261,7 +263,9 @@ const LeadPageLayout = ({ config }: { config: LeadPageConfig }) => {
                   </ul>
 
                   <a
-                    href="#"
+                    href={plan.ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full text-center font-bold py-3.5 rounded-xl transition-transform hover:scale-[1.02] ${
                       plan.highlighted
                         ? "bg-red-500 text-white shadow-md"
